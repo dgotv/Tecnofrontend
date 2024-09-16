@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import axios from "axios";
 import "../styles/pages/home.css";
 
@@ -8,7 +8,7 @@ const SmartphonesPage = () => {
 	useEffect(() => {
 		const fetchSmartphones = async () => {
 			try {
-				const responseCelulares = await axios.get("http://localhost:3000/celulares");
+				const responseCelulares = await axios.get("https://tecnobackend2.vercel.app//celulares");
 
 				const todosLosCelulares = [...responseCelulares.data];
 				setSmartphones(todosLosCelulares);
@@ -26,11 +26,7 @@ const SmartphonesPage = () => {
 					<h3>
 						{smartphone.marca} {smartphone.modelo}
 					</h3>
-					<img
-						src={`/src/assets/img/${smartphone.imagen}`}
-						alt={smartphone.modelo}
-						style={{ width: "200px", height: "200px" }}
-					/>
+					<img src={`/src/assets/img/${smartphone.imagen}`} alt={smartphone.modelo} style={{width: "200px", height: "200px"}} />
 
 					<p>Precio: ${smartphone.precio}</p>
 					<p>{smartphone.descripcion}</p>
