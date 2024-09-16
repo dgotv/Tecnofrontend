@@ -8,7 +8,7 @@ const SmartphonesPage = () => {
 	useEffect(() => {
 		const fetchSmartphones = async () => {
 			try {
-				const responseCelulares = await axios.get("https://tecnobackend2.vercel.app//celulares");
+				const responseCelulares = await axios.get("https://tecnobackend2.vercel.app/celulares");
 
 				const todosLosCelulares = [...responseCelulares.data];
 				setSmartphones(todosLosCelulares);
