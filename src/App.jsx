@@ -11,8 +11,6 @@ import AdminCelulares from "./pages/AdminCelulares";
 import UpdateSmartphone from "./pages/UpdateSmartphone";
 import AdminComputers from "./pages/AdminComputers";
 import UpdateComputer from "./pages/UpdateComputer";
-import CreateProduct from "./components/CreateProduct";
-import CrearProductoForm from "./components/Cproduct";
 
 export default function App() {
 	return (
@@ -48,9 +46,6 @@ export default function App() {
 						}
 					/>
 				</Route>
-
-				<Route path="/create/product" element={<CreateProduct />} />
-				<Route path="/cr" element={<CrearProductoForm />} />
 			</Routes>
 		</BrowserRouter>
 	);
