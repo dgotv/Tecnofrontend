@@ -40,7 +40,7 @@ function UpdateSmartphone() {
 
 	const onSubmit = async (data) => {
 		try {
-			await axios.put(`http://localhost:3000/update/celular/${id}`, data, {
+			await axios.put(`https://tecnobackend2.vercel.app/update/celular/${id}`, data, {
 				headers: {
 					Authorization: `Bearer ${token}`,
 				},

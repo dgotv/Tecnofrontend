@@ -23,7 +23,7 @@ function UpdateComputer() {
 		const fetchComputer = async () => {
 			setCargando(true);
 			try {
-				const respuesta = await axios.get(`http://localhost:3000/computadoras/${id}`, {
+				const respuesta = await axios.get(`https://tecnobackend2.vercel.app/computadoras/${id}`, {
 					headers: {
 						Authorization: `Bearer ${token}`,
 					},
@@ -42,7 +42,7 @@ function UpdateComputer() {
 
 	const onSubmit = async (data) => {
 		try {
-			await axios.put(`http://localhost:3000/update/computadora/${id}`, data, {
+			await axios.put(`https://tecnobackend2.vercel.app/update/computadora/${id}`, data, {
 				headers: {
 					Authorization: `Bearer ${token}`,
 				},

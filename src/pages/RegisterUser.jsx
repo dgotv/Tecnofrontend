@@ -1,55 +1,42 @@
-import { useForm } from "react-hook-form";
+import {useForm} from "react-hook-form";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import "../styles/pages/register.css";
 
 export default function RegisterUser() {
 	const {
 		register,
 		handleSubmit,
-		formState: { errors },
+		formState: {errors},
 	} = useForm();
 
 	const navigate = useNavigate();
 
 	const onSubmit = async (data) => {
 		try {
-			const response = await axios.post(
-				"http://localhost:3000/registro/usuario",
-				{
-					nombre: data.nombre,
-					correo: data.correo,
-					clave: data.clave,
-				}
-			);
+			const response = await axios.post("https://tecnobackend2.vercel.app/registro/usuario", {
+				nombre: data.nombre,
+				correo: data.correo,
+				clave: data.clave,
+			});
 			console.log("Usuario creado:", response.data);
 			if (response.status === 201) {
 				alert("¡Usiario creado exitosamente!");
 				navigate("/login");
 			} else {
-				alert(
-					"Error al crear el usuario. Por favor, inténtalo de nuevo."
-				);
+				alert("Error al crear el usuario. Por favor, inténtalo de nuevo.");
 			}
 		} catch (error) {
 			console.error("Error:", error);
-			alert(
-				"Ocurrió un error inesperado. Por favor, contacta al administrador."
-			);
+			alert("Ocurrió un error inesperado. Por favor, contacta al administrador.");
 		}
 	};
 	return (
 		<div>
-			<form
-				onSubmit={handleSubmit(onSubmit)}
-				className="create-user__form"
-			>
+			<form onSubmit={handleSubmit(onSubmit)} className="create-user__form">
 				<p>Creación de Usuario</p>
 				<label htmlFor="nombre">Nombre:</label>
-				<input
-					type="text"
-					{...register("nombre", { required: "Requiere un nombre" })}
-				/>
+				<input type="text" {...register("nombre", {required: "Requiere un nombre"})} />
 				{errors.nombre && <span> {errors.nombre.message}</span>}
 
 				<label htmlFor="correo">Correo:</label>
@@ -73,8 +60,7 @@ export default function RegisterUser() {
 						required: "La contraseña es obligatoria",
 						minLength: {
 							value: 6,
-							message:
-								"La contraseña debe tener al menos 6 caracteres",
+							message: "La contraseña debe tener al menos 6 caracteres",
 						},
 					})}
 				/>

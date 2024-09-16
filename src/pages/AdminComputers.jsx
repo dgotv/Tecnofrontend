@@ -11,7 +11,7 @@ const AdminComputers = () => {
 	useEffect(() => {
 		const fetchComputers = async () => {
 			try {
-				const responseComputers = await axios.get("http://localhost:3000/computadoras");
+				const responseComputers = await axios.get("https://tecnobackend2.vercel.app/computadoras");
 
 				const allComputers = [...responseComputers.data];
 				setComputers(allComputers);
@@ -24,7 +24,7 @@ const AdminComputers = () => {
 
 	const handleDelete = async (id) => {
 		try {
-			await axios.delete(`http://localhost:3000/delete/computadora/${id}`, {
+			await axios.delete(`https://tecnobackend2.vercel.app/delete/computadora/${id}`, {
 				headers: {
 					Authorization: `Bearer ${token}`,
 				},

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import axios from "axios";
 import "../styles/pages/home.css";
 
@@ -8,7 +8,7 @@ const ComputersPage = () => {
 	useEffect(() => {
 		const fetchComputers = async () => {
 			try {
-				const responseComputadoras = await axios.get("http://localhost:3000/computadoras");
+				const responseComputadoras = await axios.get("https://tecnobackend2.vercel.app/computadoras");
 
 				const todasLasComputadoras = [...responseComputadoras.data];
 				setComputers(todasLasComputadoras);

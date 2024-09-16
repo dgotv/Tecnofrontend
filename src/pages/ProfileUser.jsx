@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 
 function ProfileUser() {
@@ -8,9 +8,7 @@ function ProfileUser() {
 		const userId = localStorage.getItem("userId");
 		const fetchUser = async () => {
 			try {
-				const response = await axios.get(
-					`http://localhost:3000/perfil/usuario/${userId}`
-				);
+				const response = await axios.get(`https://tecnobackend2.vercel.app/usuario/${userId}`);
 				setUser(response.data);
 			} catch (error) {
 				console.error("Error al obtener el perfil:", error);

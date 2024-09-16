@@ -11,7 +11,7 @@ const AdminCelulares = () => {
 	useEffect(() => {
 		const fetchSmartphones = async () => {
 			try {
-				const responseCelulares = await axios.get("http://localhost:3000/celulares");
+				const responseCelulares = await axios.get("https://tecnobackend2.vercel.app/celulares");
 
 				const todosLosCelulares = [...responseCelulares.data];
 				setSmartphones(todosLosCelulares);
@@ -24,7 +24,7 @@ const AdminCelulares = () => {
 
 	const handleDelete = async (id) => {
 		try {
-			await axios.delete(`http://localhost:3000/delete/celular/${id}`, {
+			await axios.delete(`https://tecnobackend2.vercel.app/delete/celular/${id}`, {
 				headers: {
 					Authorization: `Bearer ${token}`,
 				},

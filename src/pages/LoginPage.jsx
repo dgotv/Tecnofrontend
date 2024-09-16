@@ -17,7 +17,7 @@ export default function LoginPage() {
 
 	const onSubmit = async (data) => {
 		try {
-			const response = await axios.post("http://localhost:3000/login/usuario", {
+			const response = await axios.post("https://tecnobackend2.vercel.app/login/usuario", {
 				correo: data.correo,
 				clave: data.clave,
 			});
