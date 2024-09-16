@@ -53,7 +53,7 @@ const AdminCelulares = () => {
 					<h3>
 						{smartphone.marca} {smartphone.modelo}
 					</h3>
-					<img src={`/src/assets/img/${smartphone.imagen}`} alt={smartphone.modelo} style={{width: "200px", height: "auto"}} />
+					<img src={`/images/${smartphone.imagen}`} alt={smartphone.modelo} style={{width: "200px", height: "auto"}} />
 
 					<p>Precio: ${smartphone.precio}</p>
 					<p>{smartphone.descripcion}</p>

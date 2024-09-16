@@ -26,7 +26,7 @@ const ComputersPage = () => {
 					<h3>
 						{computer.marca} {computer.modelo}
 					</h3>
-					<img src={`/src/assets/img/${computer.imagen}`} alt={computer.modelo} />
+					<img src={`/images/${computer.imagen}`} alt={computer.modelo} />
 
 					<p>Precio: ${computer.precio}</p>
 					<p>{computer.descripcion}</p>

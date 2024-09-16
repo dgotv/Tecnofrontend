@@ -49,7 +49,7 @@ const AdminComputers = () => {
 					<h3>
 						{computer.marca} {computer.modelo}
 					</h3>
-					<img src={`/src/assets/img/${computer.imagen}`} alt={computer.modelo} style={{width: "200px", height: "180px"}} />
+					<img src={`/images/${computer.imagen}`} alt={computer.modelo} style={{width: "200px", height: "180px"}} />
 
 					<p>Precio: ${computer.precio}</p>
 					<p>{computer.descripcion}</p>
