@@ -17,7 +17,7 @@ export default function CreateNewProduct() {
 		try {
 			const token = localStorage.getItem("token");
 			const response = await axios.post(
-				"http://localhost:3000/crear/producto",
+				"https://tecnobackend2.vercel.app/crear/producto",
 				{
 					categoria_id: dataToSend.categoria_id,
 					marca: data.marca,
