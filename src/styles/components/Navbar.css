@@ -1,0 +1,27 @@
+.navbar {
+	background-color: #f2f2f2;
+	padding: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar-links {
+	display: flex;
+	gap: 1rem;
+}
+
+.navbar-link {
+	text-decoration: none;
+	color: #333;
+	padding: 10px 30px;
+	font-weight: bold;
+}
+.navbar-link:hover {
+	color: #d70000;
+	text-shadow: 0 0 5px #bfccd6;
+}
+.Link-edit-products {
+	display: flex;
+	align-items: center;
+}

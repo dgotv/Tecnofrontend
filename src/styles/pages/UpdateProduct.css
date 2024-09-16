@@ -1,0 +1,57 @@
+.update-product__form {
+	max-width: 500px;
+	margin: 40px auto;
+	padding: 30px;
+	background-color: #e9e8e8;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+input,
+textarea {
+	width: 90%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+span {
+	color: red;
+	font-size: 12px;
+}
+
+butt {
+	width: 95%;
+	background-color: #367688;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+}
+button {
+	background-color: #848484; /* Gris claro para el fondo */
+	color: #ffffff; /* Gris oscuro para el texto */
+	border: none;
+	padding: 10px 20px;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+	background-color: #4a4a4a; /* Gris más oscuro al pasar el ratón */
+}
+
+button:active {
+	background-color: #202020; /* Gris aún más oscuro al presionar */
+	box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra interna para efecto de hundimiento */
+}

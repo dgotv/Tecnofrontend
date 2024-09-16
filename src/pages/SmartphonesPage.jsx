@@ -1,0 +1,44 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "../styles/pages/home.css";
+
+const SmartphonesPage = () => {
+	const [smartphones, setSmartphones] = useState([]);
+
+	useEffect(() => {
+		const fetchSmartphones = async () => {
+			try {
+				const responseCelulares = await axios.get("http://localhost:3000/celulares");
+
+				const todosLosCelulares = [...responseCelulares.data];
+				setSmartphones(todosLosCelulares);
+			} catch (error) {
+				console.error("Error al obtener los celulares:", error);
+			}
+		};
+		fetchSmartphones();
+	}, []);
+
+	return (
+		<div className="product-container">
+			{smartphones.map((smartphone) => (
+				<div key={smartphone.id} className="product-card">
+					<h3>
+						{smartphone.marca} {smartphone.modelo}
+					</h3>
+					<img
+						src={`/src/assets/img/${smartphone.imagen}`}
+						alt={smartphone.modelo}
+						style={{ width: "200px", height: "200px" }}
+					/>
+
+					<p>Precio: ${smartphone.precio}</p>
+					<p>{smartphone.descripcion}</p>
+					<button>Ver más</button>
+				</div>
+			))}
+		</div>
+	);
+};
+
+export default SmartphonesPage;
