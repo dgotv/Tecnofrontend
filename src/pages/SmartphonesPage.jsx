@@ -26,7 +26,7 @@ const SmartphonesPage = () => {
 					<h3>
 						{smartphone.marca} {smartphone.modelo}
 					</h3>
-					<img src={`/src/assets/img/${smartphone.imagen}`} alt={smartphone.modelo} style={{width: "200px", height: "200px"}} />
+					<img src={`/images/${smartphone.imagen}`} alt={smartphone.modelo} style={{width: "200px", height: "200px"}} />
 
 					<p>Precio: ${smartphone.precio}</p>
 					<p>{smartphone.descripcion}</p>
