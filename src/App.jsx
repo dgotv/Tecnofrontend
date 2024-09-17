@@ -14,45 +14,50 @@ import UpdateComputer from "./pages/UpdateComputer";
 import SmartphoneDetails from "./components/SmartphoneDetails";
 import ComputersDetails from "./components/ComputersDetails";
 import Footer from "./components/Footer";
+import "./styles/pages/home.css";
 
 export default function App() {
 	return (
 		<BrowserRouter>
 			<Navbar />
-			<Routes>
-				<Route
-					path="/"
-					element={
-						<>
-							{<SmartphonesPage />}
-							{<ComputersPage />}
-						</>
-					}
-				/>
+			<div className="page-container">
+				<div className="content-wrap">
+					<Routes>
+						<Route
+							path="/"
+							element={
+								<>
+									{<SmartphonesPage />}
+									{<ComputersPage />}
+								</>
+							}
+						/>
 
-				<Route path="/computer/:id" element={<ComputersDetails />} />
-				<Route path="/smartphone/:id" element={<SmartphoneDetails />} />
-				<Route path="/computers" element={<ComputersPage />} />
-				<Route path="/register" element={<RegisterUser />} />
-				<Route path="/login" element={<LoginPage />} />
-				<Route path="/profile/usuario/:id" element={<ProfileUser />} />
-				<Route path="/smartphones" element={<SmartphonesPage />} />
+						<Route path="/computer/:id" element={<ComputersDetails />} />
+						<Route path="/smartphone/:id" element={<SmartphoneDetails />} />
+						<Route path="/computers" element={<ComputersPage />} />
+						<Route path="/register" element={<RegisterUser />} />
+						<Route path="/login" element={<LoginPage />} />
+						<Route path="/profile/usuario/:id" element={<ProfileUser />} />
+						<Route path="/smartphones" element={<SmartphonesPage />} />
 
-				<Route element={<ProtectedRoute allowedRoles={["administrador"]} />}>
-					<Route path="/create/products" element={<CreateNewProduct />} />
-					<Route path="/update/computer/:id" element={<UpdateComputer />} />
-					<Route path="/update/smartphone/:id" element={<UpdateSmartphone />} />
-					<Route
-						path="/edit/products"
-						element={
-							<>
-								<AdminCelulares />
-								<AdminComputers />
-							</>
-						}
-					/>
-				</Route>
-			</Routes>
+						<Route element={<ProtectedRoute allowedRoles={["administrador"]} />}>
+							<Route path="/create/products" element={<CreateNewProduct />} />
+							<Route path="/update/computer/:id" element={<UpdateComputer />} />
+							<Route path="/update/smartphone/:id" element={<UpdateSmartphone />} />
+							<Route
+								path="/edit/products"
+								element={
+									<>
+										<AdminCelulares />
+										<AdminComputers />
+									</>
+								}
+							/>
+						</Route>
+					</Routes>
+				</div>
+			</div>
 			<Footer />
 		</BrowserRouter>
 	);
