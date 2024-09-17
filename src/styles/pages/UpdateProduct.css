@@ -38,8 +38,8 @@ butt {
 	cursor: pointer;
 }
 button {
-	background-color: #848484; /* Gris claro para el fondo */
-	color: #ffffff; /* Gris oscuro para el texto */
+	background-color: #848484;
+	color: #ffffff;
 	border: none;
 	padding: 10px 20px;
 	border-radius: 20px;
@@ -48,10 +48,10 @@ button {
 }
 
 button:hover {
-	background-color: #4a4a4a; /* Gris más oscuro al pasar el ratón */
+	background-color: #4a4a4a;
 }
 
 button:active {
-	background-color: #202020; /* Gris aún más oscuro al presionar */
-	box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra interna para efecto de hundimiento */
+	background-color: #202020;
+	box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.3);
 }

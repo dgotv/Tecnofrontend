@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 import "../styles/pages/home.css";
 
 const SmartphonesPage = () => {
@@ -19,6 +20,12 @@ const SmartphonesPage = () => {
 		fetchSmartphones();
 	}, []);
 
+	const navigate = useNavigate();
+
+	const handleDetails = (id) => {
+		navigate(`/smartphone/${id}`);
+	};
+
 	return (
 		<div className="product-container">
 			{smartphones.map((smartphone) => (
@@ -30,7 +37,7 @@ const SmartphonesPage = () => {
 
 					<p>Precio: ${smartphone.precio}</p>
 					<p>{smartphone.descripcion}</p>
-					<button>Ver más</button>
+					<button onClick={() => handleDetails(smartphone.id)}>Características</button>
 				</div>
 			))}
 		</div>

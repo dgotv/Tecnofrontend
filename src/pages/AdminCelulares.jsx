@@ -57,7 +57,6 @@ const AdminCelulares = () => {
 
 					<p>Precio: ${smartphone.precio}</p>
 					<p>{smartphone.descripcion}</p>
-					<button>Ver más</button>
 					<button onClick={() => handleDelete(smartphone.id)}>Eliminar</button>
 					<button onClick={() => handleEdit(smartphone.id)}>Editar</button>
 				</div>

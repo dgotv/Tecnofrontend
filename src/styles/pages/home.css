@@ -42,9 +42,7 @@
 	font-weight: bold;
 }
 
-/* Estilos adicionales para personalizar */
 .user-card img {
-	/* para una imagen de perfil opcional  */
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
@@ -54,6 +52,29 @@
 img {
 	width: 200px;
 	height: 180px;
+}
+
+.div-footer {
+	display: flex;
+	justify-content: center;
+	background-color: #848484;
+	color: #ffffff;
+	padding: 2px;
+	text-align: center;
+	font-size: 14px;
+}
+
+.div-footer p {
+	margin: 5px 20px;
+}
+
+.div-footer p:hover {
+	color: #c0c0c0;
+	cursor: pointer;
+}
+
+.div-footer p:last-child {
+	margin-bottom: 0;
 }
 
 @media (max-width: 768px) {

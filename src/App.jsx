@@ -11,6 +11,9 @@ import AdminCelulares from "./pages/AdminCelulares";
 import UpdateSmartphone from "./pages/UpdateSmartphone";
 import AdminComputers from "./pages/AdminComputers";
 import UpdateComputer from "./pages/UpdateComputer";
+import SmartphoneDetails from "./components/SmartphoneDetails";
+import ComputersDetails from "./components/ComputersDetails";
+import Footer from "./components/Footer";
 
 export default function App() {
 	return (
@@ -26,6 +29,9 @@ export default function App() {
 						</>
 					}
 				/>
+
+				<Route path="/computer/:id" element={<ComputersDetails />} />
+				<Route path="/smartphone/:id" element={<SmartphoneDetails />} />
 				<Route path="/computers" element={<ComputersPage />} />
 				<Route path="/register" element={<RegisterUser />} />
 				<Route path="/login" element={<LoginPage />} />
@@ -47,6 +53,7 @@ export default function App() {
 					/>
 				</Route>
 			</Routes>
+			<Footer />
 		</BrowserRouter>
 	);
 }

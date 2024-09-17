@@ -53,7 +53,6 @@ const AdminComputers = () => {
 
 					<p>Precio: ${computer.precio}</p>
 					<p>{computer.descripcion}</p>
-					<button>Ver más</button>
 					<button onClick={() => handleDelete(computer.id)}>Eliminar</button>
 					<button onClick={() => handleEdit(computer.id)}>Editar</button>
 				</div>
