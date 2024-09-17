@@ -1,5 +1,6 @@
 import {useNavigate, Outlet} from "react-router-dom";
 import {useEffect} from "react";
+
 const verifyTokenAndRole = (allowedRoles) => {
 	const token = localStorage.getItem("token");
 	console.log("token local storage", localStorage.getItem("token"));

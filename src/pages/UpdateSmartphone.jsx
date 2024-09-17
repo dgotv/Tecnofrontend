@@ -21,7 +21,7 @@ function UpdateSmartphone() {
 		const obtenerCelular = async () => {
 			setCargando(true);
 			try {
-				const respuesta = await axios.get(`http://localhost:3000/celulares/${id}`, {
+				const respuesta = await axios.get(`https://tecnobackend2.vercel.app/celulares/${id}`, {
 					headers: {
 						Authorization: `Bearer ${token}`,
 					},
