@@ -8,7 +8,7 @@ function ProfileUser() {
 		const userId = localStorage.getItem("userId");
 		const fetchUser = async () => {
 			try {
-				const response = await axios.get(`https://tecnobackend2.vercel.app/usuario/${userId}`);
+				const response = await axios.get(`https://tecnobackend2.vercel.app/perfil/usuario/${userId}`);
 				setUser(response.data);
 			} catch (error) {
 				console.error("Error al obtener el perfil:", error);
